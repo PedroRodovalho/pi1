@@ -146,9 +146,67 @@ namespace ListaDeCompras
 
         private void btnRemoverLista_Click(object sender, EventArgs e)
         {
-            int linhas;
-            listNovaLista.Items.Remove((ListViewItem)itemSelecionado);
+            string nomeItem = txtNomeItem.Text;
+            string categoria = comboCategoria.Text;
+            string quantidade = comboQuantidade.Text;
+            string preco = txtPreco.Text;
+            string prioridade;
+            double dPreco;
 
+            preco = preco.Replace(".", ",");
+
+
+            if (nomeItem.Equals(null) || nomeItem.Equals(""))
+            {
+                MessageBox.Show("Insira o nome do item antes de adicionar!");
+                txtNomeItem.Focus();
+
+            }
+            else if (!double.TryParse(preco, out dPreco))
+            {
+                MessageBox.Show("Preço inserido invalido!");
+                txtPreco.Text = "";
+            }
+            else if (categoria.Equals(null) || categoria.Equals(""))
+            {
+                MessageBox.Show("Por favor, informe a categoria do produto!");
+
+            }
+            else if (quantidade.Equals(null) || quantidade.Equals(""))
+            {
+                quantidade = "1";
+                double quant;
+                double.TryParse(quantidade, out quant);
+                dPreco = (double)dPreco * (double)quant;
+                precoTotal = (double)precoTotal + (double)dPreco;
+                quantidadeItens++;
+                if (checkPrioridade.Checked)
+                {
+                    prioridade = "Sim";
+                    quantidadePrioridade++;
+
+                    precoPrioridade = (double)precoPrioridade + (double)dPreco;
+                    lblQuantidadePrioridade.Text = quantidadePrioridade.ToString();
+                    lblTotalPrioridade.Text = precoPrioridade.ToString();
+                }
+                else
+                {
+                    prioridade = "Não";
+                }
+
+                listNovaLista.Items.Add((ListViewItem)itemSelecionado);
+                ListViewItem item = new ListViewItem(nomeItem);
+                item.SubItems.Add(categoria);
+                item.SubItems.Add(quantidade);
+                item.SubItems.Add(dPreco.ToString());
+                item.SubItems.Add(prioridade);
+                listNovaLista.Items.Add(item);
+                lblPrecoTotal.Text = precoTotal.ToString();
+                lblQuantidadeItens.Text = quantidadeItens.ToString();
+
+                listNovaLista.Items.Add((ListViewItem)itemSelecionado);
+
+            }
         }
 
         private void listNovaLista_SelectedIndexChanged(object sender, EventArgs e)
@@ -163,10 +221,12 @@ namespace ListaDeCompras
                     if (itemSelecionado != null)
                     {
                         btnRemoverLista.Enabled = true;
+                        btnEditar.Enabled = true;
                     }
                     else
                     {
                         btnRemoverLista.Enabled = false;
+                        btnEditar.Enabled = false;
                     }
             }
             }catch(Exception ex)
@@ -205,6 +265,20 @@ namespace ListaDeCompras
             retornoImpressora = MP2032.AcionaGuilhotina(1);
 
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            txtNomeLista.Text = String.Empty;
+            txtNomeItem.Text = String.Empty;
+            txtPreco.Text = String.Empty;
+            comboCategoria.SelectedIndex = -1;
+            comboQuantidade.SelectedIndex = -1;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            //listNovaLista.Enabled;
         }
 
         private void comboCategoria_SelectedIndexChanged(object sender, EventArgs e)

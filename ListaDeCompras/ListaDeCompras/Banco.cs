@@ -12,6 +12,7 @@ namespace ListaDeCompras
 {
     class Banco
     {
+        //Mudei o Database para 'listaCompras' e coloquei o Password para 'root', minha maquina não consegue usar suas configurações
         public void verificaTabela()
         {
             var connString = "Server=localhost;Database=test;Uid=root;Password=";
@@ -23,7 +24,7 @@ namespace ListaDeCompras
         
         public int getLastIdList()
         {
-            var connString = "Server=localhost;Database=ListaCompras;Uid=root;Password=";
+            var connString = "Server=localhost;Database=listaCompras;Uid=root;Password=root";
             var connection = new MySqlConnection(connString);
             var command = connection.CreateCommand();
             int lastId = -1;
@@ -52,7 +53,7 @@ namespace ListaDeCompras
         }
         public void criarNovaLista(Lista lista)
         {
-            var connString = "Server=localhost;Database=ListaCompras;Uid=root;Password=";
+            var connString = "Server=localhost;Database=listaCompras;Uid=root;Password=root";
             var connection = new MySqlConnection(connString);
             var command = connection.CreateCommand();
             
@@ -78,7 +79,7 @@ namespace ListaDeCompras
         }
         public List<Itens> listarItensLista(int idLista)
         {
-            var connString = "Server=localhost;Database=ListaCompras;Uid=root;Password=";
+            var connString = "Server=localhost;Database=listaCompras;Uid=root;Password=root";
             var connection = new MySqlConnection(connString);
             var command = connection.CreateCommand();
             List<Itens> listaItens = new List<Itens>();
@@ -114,7 +115,7 @@ namespace ListaDeCompras
         }
         public void inserirLista(Itens itens)
         {
-            var connString = "Server=localhost;Database=ListaCompras;Uid=root;Password=";
+            var connString = "Server=localhost;Database=listaCompras;Uid=root;Password=root";
             var connection = new MySqlConnection(connString);
             var command = connection.CreateCommand();
             try

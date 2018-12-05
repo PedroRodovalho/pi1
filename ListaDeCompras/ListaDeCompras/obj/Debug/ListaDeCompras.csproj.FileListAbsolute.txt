@@ -50,3 +50,17 @@ C:\Users\Bruno Fiuza\Desktop\TRABALHO\ListaDeCompras\ListaDeCompras\obj\Debug\Li
 C:\Users\Bruno Fiuza\Desktop\TRABALHO\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.csproj.CopyComplete
 C:\Users\Bruno Fiuza\Desktop\TRABALHO\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.exe
 C:\Users\Bruno Fiuza\Desktop\TRABALHO\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.pdb
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\bin\Debug\ListaDeCompras.exe.config
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\bin\Debug\ListaDeCompras.exe
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\bin\Debug\ListaDeCompras.pdb
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\bin\Debug\MySql.Data.dll
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\bin\Debug\Google.Protobuf.dll
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\bin\Debug\MySql.Data.xml
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.csprojAssemblyReference.cache
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.Form1.resources
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.Properties.Resources.resources
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.csproj.GenerateResource.cache
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.csproj.CoreCompileInputs.cache
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.csproj.CopyComplete
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.exe
+C:\Users\p\Documents\GitHub\pi1\ListaDeCompras\ListaDeCompras\obj\Debug\ListaDeCompras.pdb

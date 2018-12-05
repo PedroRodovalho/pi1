@@ -59,7 +59,7 @@
             this.lblPrecoTotal = new System.Windows.Forms.Label();
             this.btnRemoverLista = new System.Windows.Forms.Button();
             this.separator = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIdLista = new System.Windows.Forms.TextBox();
@@ -85,6 +85,7 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelNovaLista.SuspendLayout();
             this.panelFinalizado.SuspendLayout();
@@ -130,6 +131,7 @@
             // 
             // panelNovaLista
             // 
+            this.panelNovaLista.Controls.Add(this.btnEditar);
             this.panelNovaLista.Controls.Add(this.label24);
             this.panelNovaLista.Controls.Add(this.lblStatus);
             this.panelNovaLista.Controls.Add(this.label23);
@@ -156,7 +158,7 @@
             this.panelNovaLista.Controls.Add(this.lblPrecoTotal);
             this.panelNovaLista.Controls.Add(this.btnRemoverLista);
             this.panelNovaLista.Controls.Add(this.separator);
-            this.panelNovaLista.Controls.Add(this.button6);
+            this.panelNovaLista.Controls.Add(this.btnLimpar);
             this.panelNovaLista.Controls.Add(this.btnAdicionar);
             this.panelNovaLista.Controls.Add(this.label6);
             this.panelNovaLista.Controls.Add(this.txtIdLista);
@@ -410,14 +412,15 @@
             this.separator.Size = new System.Drawing.Size(705, 2);
             this.separator.TabIndex = 15;
             // 
-            // button6
+            // btnLimpar
             // 
-            this.button6.Location = new System.Drawing.Point(519, 103);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(89, 23);
-            this.button6.TabIndex = 14;
-            this.button6.Text = "Limpar campos";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnLimpar.Location = new System.Drawing.Point(519, 103);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(89, 23);
+            this.btnLimpar.TabIndex = 14;
+            this.btnLimpar.Text = "Limpar campos";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnAdicionar
             // 
@@ -663,6 +666,16 @@
             this.label25.Text = "LISTA FINALIZADA E CRIADA COM SUCESSO.";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(456, 475);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 42;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -704,7 +717,7 @@
         private System.Windows.Forms.ComboBox comboCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label separator;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.ColumnHeader nomeItem;
         private System.Windows.Forms.ColumnHeader categoriaItem;
@@ -742,6 +755,7 @@
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
 
